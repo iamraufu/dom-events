@@ -1,4 +1,4 @@
-var authors = document.getElementsByClassName('author');
+var authors = document.querySelectorAll('.special h3');
 for (let index = 0; index < authors.length; index++) {
     const element = authors[index];
     element.style.backgroundColor = 'yellow';
