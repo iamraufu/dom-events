@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid aqua;
+}
