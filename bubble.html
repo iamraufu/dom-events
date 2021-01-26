@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id='first' class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Fuga, perferendis consectetur.</li>
+            <li class="item">Voluptas, nobis fugit?</li>
+            <li class="item">Quam, illo delectus!</li>
+            <li class="item">Ullam, est? Eos!</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('first').addEventListener('click', function(event) {
+            console.log('First Button Clicked')
+        })
+        document.getElementById('container').addEventListener('click', function(event) {
+            console.log('Container Clicked')
+        })
+        document.getElementById('myList').addEventListener('click', function(event) {
+            console.log('UL Clicked')
+        })
+    </script>
+</body>
+
+</html>
