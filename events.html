@@ -9,11 +9,33 @@
 
 <body>
     <h1 onclick="handleClick()">Exploring Events</h1>
-    <button onclick="alert(new Date())">Click me</button>
+    <button onclick="alert(new Date())">Click me-0</button>
+    <button id="second">Click Me-1</button>
+    <button id="third">Click Me-2</button>
+    <button id="last">Click Me-3</button>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae aliquid dignissimos in deserunt, rem aperiam itaque corporis ratione consectetur cum!</p>
     <script>
         function handleClick() {
+            alert('Hello');
             console.log('Someone Clicked Me')
         }
+
+        function bgColorChange() {
+            document.body.style.backgroundColor = '#00101f';
+            document.body.style.color = 'white';
+
+        }
+        const secondButton = document.getElementById('second');
+        secondButton.onclick = handleClick;
+
+        const thirdButton = document.getElementById('third');
+        thirdButton.onclick = bgColorChange;
+
+        const lastButton = document.getElementById('last').addEventListener('click', function() {
+            document.body.style.color = 'tomato';
+        });
+
+        // lastButton.addEventListener('click', handleClick);
     </script>
 </body>
 
