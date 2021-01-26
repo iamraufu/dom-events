@@ -17,17 +17,34 @@
             <li class="item">Quam, illo delectus!</li>
             <li class="item">Ullam, est? Eos!</li>
         </ul>
+        <button id="addNew">Click to Add new Item</button>
     </div>
     <script>
-        document.getElementById('first').addEventListener('click', function(event) {
-            console.log('First Button Clicked');
-            event.stopPropagation();
-        })
-        document.getElementById('container').addEventListener('click', function(event) {
-            console.log('Container Clicked')
-        })
+        // document.getElementById('first').addEventListener('click', function(event) {
+        //     console.log('First Button Clicked');
+        //     event.stopPropagation();
+        // })
+        // document.getElementById('container').addEventListener('click', function(event) {
+        //     console.log('Container Clicked')
+        // })
         document.getElementById('myList').addEventListener('click', function(event) {
-            console.log('UL Clicked')
+            // console.log(this, event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        // var items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function(event) {
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        document.getElementById('addNew').addEventListener('click', function(event) {
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = 'Brand New item';
+            itemParent.appendChild(newItem);
         })
     </script>
 </body>
