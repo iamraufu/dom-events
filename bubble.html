@@ -20,7 +20,8 @@
     </div>
     <script>
         document.getElementById('first').addEventListener('click', function(event) {
-            console.log('First Button Clicked')
+            console.log('First Button Clicked');
+            event.stopPropagation();
         })
         document.getElementById('container').addEventListener('click', function(event) {
             console.log('Container Clicked')
